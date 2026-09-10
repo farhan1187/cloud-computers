@@ -63,6 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const navHeight = navbar ? navbar.offsetHeight : 80;
         const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
+        // Immediately reflect the clicked link as active so there's no
+        // flicker/mismatch while the smooth scroll is still animating.
+        if (this.classList.contains('nav-link')) {
+          navLinks.forEach((link) => link.classList.remove('active'));
+          this.classList.add('active');
+          suppressObserverUntil = Date.now() + 800; // ignore observer during the scroll animation
+        }
+
         window.scrollTo({
           top: targetPos,
           behavior: 'smooth'
@@ -72,26 +80,71 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     4. Active Navigation Link on Scroll
+     4. Active Navigation Link on Scroll (IntersectionObserver-based)
      -------------------------------------------------------------------------- */
-  const updateActiveNavLink = () => {
-    const scrollY = window.pageYOffset;
+  // Tracks which sections are currently intersecting the "active zone" and
+  // how much of each is visible, so we always pick the single best match
+  // instead of letting whichever section happens to be checked last win.
+  let suppressObserverUntil = 0;
+  const visibleSections = new Map(); // sectionId -> intersectionRatio
 
-    sections.forEach((section) => {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 120;
-      const sectionId = section.getAttribute('id');
-
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        navLinks.forEach((link) => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
+  const setActiveLink = (sectionId) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${sectionId}`);
     });
   };
 
-  window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+  const navHeightPx = navbar ? navbar.offsetHeight : 80;
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      // Ignore observer updates while a click-triggered smooth scroll is
+      // still animating, so the clicked link doesn't get overridden mid-flight.
+      if (Date.now() < suppressObserverUntil) return;
+
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute('id');
+        if (entry.isIntersecting) {
+          visibleSections.set(id, entry.intersectionRatio);
+        } else {
+          visibleSections.delete(id);
+        }
+      });
+
+      if (visibleSections.size === 0) return;
+
+      // Pick the section with the greatest visible ratio inside the active zone.
+      let bestId = null;
+      let bestRatio = -1;
+      visibleSections.forEach((ratio, id) => {
+        if (ratio > bestRatio) {
+          bestRatio = ratio;
+          bestId = id;
+        }
+      });
+
+      if (bestId) setActiveLink(bestId);
+    },
+    {
+      // Shrink the observed viewport by the navbar height at the top,
+      // and treat a section as "active" once it crosses the middle-ish
+      // of the remaining viewport.
+      rootMargin: `-${navHeightPx}px 0px -50% 0px`,
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
+    }
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+
+  // Handle the very top of the page (e.g. on load / after scrolling to #home)
+  // where the hero section may not report a high intersection ratio.
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (window.pageYOffset < 10) {
+        setActiveLink('home');
+      }
+    },
+    { passive: true }
+  );
 });
