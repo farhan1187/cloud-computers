@@ -8,8 +8,8 @@
 const CLOUD_WHATSAPP_CONFIG = {
   // UAE WhatsApp Business Phone Number (International format without leading '+' or special chars)
   // Default demo number: 971501234567. Change this value to your active UAE WhatsApp number.
-  phone: '971501234567',
-  displayPhone: '+971 50 123 4567',
+  phone: '971553350141',
+  displayPhone: '+971 553350141',
   companyName: 'Cloud Computers',
   city: 'Dubai / UAE',
 
