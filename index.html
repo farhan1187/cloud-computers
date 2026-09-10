@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<title>Cloud Computers | Enterprise IT Infrastructure &amp; 3D Solutions</title>-->
+  <title>Cloud Computers</title>
+  <meta name="description" content="Cloud Computers delivers next-generation IT solutions: enterprise networking, structured cabling, hardware sales, cloud systems, SIRA security, and 24/7 technical support.">
+  <meta name="theme-color" content="#030712">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon from Logo -->
+  <link rel="icon" type="image/png" href="css/asset/logo.png">
+</head>
+<body>
+  <!-- Ambient Particle Mesh Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Cyber Grid Subtle Background Overlay -->
+  <div class="cyber-grid-overlay" aria-hidden="true"></div>
+
+  <div class="site-content">
+    <!-- ====================================================================
+         1. NAVBAR (Glassmorphism Capsule)
+         ==================================================================== -->
+    <header class="navbar">
+      <div class="container">
+        <a href="#home" class="brand-logo" aria-label="Cloud Computers Home">
+          <img src="css/asset/logo.png" alt="Cloud Computers Logo" class="brand-logo-img">
+          <span class="brand-text">CLOUD <span class="brand-accent">COMPUTERS</span></span>
+        </a>
+
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#process" class="nav-link">Process</a></li>
+            <li><a href="#network" class="nav-link">Networking</a></li>
+            <li><a href="#products" class="nav-link">Products</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="mobile-menu-cta" style="display: none;">
+              <button class="btn btn-primary" data-open-modal="quote" style="width: 100%; justify-content: center;">Get a Quote</button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-primary btn-sm" data-open-modal="quote">Get a Quote</button>
+          <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         2. HERO SECTION WITH 3D WEBGL ENGINE
+         ==================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-glow-ambient" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Content -->
+          <div class="hero-content">
+           <!-- <div class="hero-tag">
+              <span class="ping-indicator">
+                <span class="ping-wave"></span>
+                <span class="ping-dot"></span>
+              </span>
+              NEXT-GEN ENTERPRISE IT ARCHITECTURE
+            </div>-->
+
+            <h1 class="hero-title">
+              <span class="title-white">CLOUD</span> <span class="title-blue">COMPUTERS</span>
+            </h1>
+
+            <h2 class="hero-subtitle">14 Years of Trusted Technology &amp; IT Solutions</h2>
+
+            <p class="hero-description">
+              Based in Umm Al Quwain, UAE, We delivers reliable IT solutions for businesses and individuals. From computer sales and services to networking, structured cabling, security, biometrics, and technical support, we provide practical technology solutions you can rely on.
+            </p>
+
+      <!--      <div class="hero-actions">
+              <a href="#services" class="btn btn-primary">
+                Explore Services
+                <span class="btn-arrow" aria-hidden="true">›</span>
+              </a>
+              <a href="https://wa.me/971553350141?text=Hello%20Cloud%20Computers,%20I%20would%20like%20to%20request%20an%20IT%20consultation." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 id="hero-wa-btn" 
+                 class="btn btn-whatsapp">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                Inquire on WhatsApp
+              </a>
+            </div>  -->
+
+            <div class="hero-badges-strip">
+              <div class="hero-badge-item">
+                <span class="hero-badge-icon">⚡</span>
+                <span><strong>14+ Years</strong> Since 2011</span>
+              </div>
+            <!--  <div class="hero-badge-item">
+                <span class="hero-badge-icon">🛡️</span>
+                <span><strong>DEWA &bull; SIRA</strong> Certified</span>
+              </div>  -->
+              <div class="hero-badge-item">
+                <span class="hero-badge-icon">👥</span>
+                <span><strong>10+</strong> In-House Experts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right 3D Interactive WebGL Stage -->
+          <div class="hero-3d-stage">
+            <div id="hero-three-canvas" title="Click and drag to rotate the 3D Cloud Model"></div>
+
+            <!-- Floating Telemetry HUD Readouts -->
+          <!--  <div class="hud-telemetry-tag tag-top-left">
+              <span>● LATENCY: 0.2ms</span>
+            </div>
+            <div class="hud-telemetry-tag tag-top-right">
+              <span>🛡️ SIRA CERTIFIED</span>
+            </div>
+            <div class="hud-telemetry-tag tag-bottom-left">
+              <span>🔒 AES-256 GCM</span>
+            </div> -->
+            <div class="hud-telemetry-tag tag-bottom-right">
+              <span>⚡ 10G DUAL WAN</span>
+            </div>  
+
+            <!-- Interactive 3D Viewport Controls Bar -->
+           <!-- <div class="hero-3d-controls">
+              <button id="btn-3d-rotate" class="ctrl-btn active" title="Toggle Auto-Rotation">Auto-Rotate</button>
+              <button id="btn-3d-wireframe" class="ctrl-btn" title="Toggle 3D Wireframe Mode">Wireframe</button>
+              <button id="btn-3d-reset" class="ctrl-btn" title="Reset Camera Perspective">Reset 3D</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================
+           TRUSTED BY LEADING BUSINESSES & ORGANIZATIONS (Brand Ticker Marquee)
+           ================================================================== -->
+    <!--  <div class="brands-marquee-section">
+        <div class="container">
+          <div class="brands-marquee-header text-center">
+         <!--  <span class="brands-badge-tag">AUTHORIZED PARTNER &amp; SERVICE ECOSYSTEM</span>  
+            <h3 class="brands-marquee-title">Trusted by Leading Businesses &amp; Organizations</h3>
+          <!-- <p class="brands-marquee-subtitle">Certified deployment, hardware sales, enterprise infrastructure &amp; 24/7 technical support across premier technology brands</p>   
+          </div>
+        </div>
+
+        <div class="marquee-track-wrapper" aria-label="Brands and technology partners serviced by Cloud Computers">
+          <div class="marquee-track">
+            <!-- Brand 1: Cisco -->
+        <!--    <div class="brand-capsule-card" title="Cisco Systems - Enterprise Networking & Switches">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 13h1.5v-2H2v2zm3.5 3h1.5V8H5.5v8zm3.5 3H10.5V5H9v14zm4 0h1.5V5H13v14zm3.5-3H18V8h-1.5v8zm3.5-3H22v-2h-1.5v2z"/></svg>
+              </div> 
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Cisco Systems</span>
+                <span class="brand-capsule-cat">ENTERPRISE NETWORKING</span>
+              </div>
+            </div> -->
+
+            <!-- Brand 2: HP -->
+          <!--  <div class="brand-capsule-card" title="HP Enterprise - Servers, Workstations & Printers">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 2h3.2l-3.4 20H2.1L5.5 2zm5.7 0h3.2l-1.3 7.8h3.3L15 2h3.2l-3.4 20h-3.2l1.4-8.2h-3.3L8.3 22H5.1l3.4-20h2.7z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">HP Enterprise</span>
+                <span class="brand-capsule-cat">SERVERS &amp; HARDWARE</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 3: Dell -->
+          <!--  <div class="brand-capsule-card" title="Dell Technologies - PowerEdge & Storage">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.8 14.2h-2V7.8h2v8.4zm4.8 0h-2V7.8h2v8.4zm4.8 0h-2V7.8h2v8.4zM6.2 16.2H4.2V7.8h2v8.4z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Dell Technologies</span>
+                <span class="brand-capsule-cat">POWEREDGE &amp; SAN</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 4: Fortinet -->
+          <!--  <div class="brand-capsule-card" title="Fortinet - Next-Gen Firewalls">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1 14h-2v-2h2v2zm0-4h-2V7h2v5zm4 4h-2v-5h2v5zm0-7h-2V7h2v2z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Fortinet</span>
+                <span class="brand-capsule-cat">NETWORK SECURITY</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 5: Hikvision -->
+          <!--  <div class="brand-capsule-card" title="Hikvision - CCTV & Biometric Security">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Hikvision</span>
+                <span class="brand-capsule-cat">ACCESS &amp; CCTV</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 6: Dahua -->
+          <!--  <div class="brand-capsule-card" title="Dahua Technology - IP Security & Access Control">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Dahua Technology</span>
+                <span class="brand-capsule-cat">IP SURVEILLANCE</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 7: Ubiquiti -->
+          <!--  <div class="brand-capsule-card" title="Ubiquiti UniFi - High Density Wi-Fi">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.95 3 2.58 5.75 0 9.85l1.92 1.44C3.99 7.82 7.74 5.4 12 5.4s8.01 2.42 10.08 5.89l1.92-1.44C21.42 5.75 17.05 3 12 3zm0 4.8c-3.72 0-6.93 1.96-8.8 4.95l1.94 1.45C6.54 11.83 9.07 10.2 12 10.2s5.46 1.63 6.86 4l1.94-1.45C18.93 9.76 15.72 7.8 12 7.8zm0 4.8c-2.43 0-4.52 1.25-5.76 3.15L12 21l5.76-5.25C16.52 13.85 14.43 12.6 12 12.6z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Ubiquiti UniFi</span>
+                <span class="brand-capsule-cat">ENTERPRISE WI-FI</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 8: Lenovo -->
+          <!--  <div class="brand-capsule-card" title="Lenovo - Workstations & Data Center">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v10H4zM2 18h20v2H2zM9 16h6v1H9z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Lenovo</span>
+                <span class="brand-capsule-cat">WORKSTATIONS &amp; PCS</span>
+              </div>
+            </div>   -->
+
+            <!-- Brand 9: Microsoft -->
+           <!-- <div class="brand-capsule-card" title="Microsoft - Cloud & Infrastructure">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 2h9v9H2V2zm11 0h9v9h-9V2zM2 13h9v9H2v-9zm11 0h9v9h-9v-9z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Microsoft</span>
+                <span class="brand-capsule-cat">CLOUD &amp; OS SERVERS</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 10: Aruba -->
+          <!--  <div class="brand-capsule-card" title="Aruba Networks - Core Switches & Campus Wi-Fi">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zm0 8.5L4.5 7.75 12 4 19.5 7.75 12 10.5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Aruba Networks</span>
+                <span class="brand-capsule-cat">CAMPUS SWITCHING</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 11: APC Schneider -->
+          <!--  <div class="brand-capsule-card" title="APC by Schneider Electric - Power & Racks">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">APC Schneider</span>
+                <span class="brand-capsule-cat">DATA CENTER UPS</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 12: Canon -->
+          <!--  <div class="brand-capsule-card" title="Canon - Commercial Printing Solutions">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Canon</span>
+                <span class="brand-capsule-cat">ENTERPRISE PRINT</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 13: Epson -->
+          <!--  <div class="brand-capsule-card" title="Epson - Commercial Printers & Scanners">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 3H6v4h12V3zM3 9c-1.1 0-2 .9-2 2v7h4v3h14v-3h4v-7c0-1.1-.9-2-2-2H3zm14 10H7v-4h10v4zm2-6.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Epson</span>
+                <span class="brand-capsule-cat">PRINTER SOLUTIONS</span>
+              </div>
+            </div>   -->
+
+            <!-- Brand 14: Sophos -->
+          <!--  <div class="brand-capsule-card" title="Sophos - Unified Threat Management">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Sophos</span>
+                <span class="brand-capsule-cat">ENDPOINT DEFENSE</span>
+              </div>
+            </div>  -->
+
+            <!-- ================= REPEAT SET FOR SEAMLESS CONTINUOUS LOOP ================= -->
+            <!-- Brand 1: Cisco -->
+           <!-- <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 13h1.5v-2H2v2zm3.5 3h1.5V8H5.5v8zm3.5 3H10.5V5H9v14zm4 0h1.5V5H13v14zm3.5-3H18V8h-1.5v8zm3.5-3H22v-2h-1.5v2z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Cisco Systems</span>
+                <span class="brand-capsule-cat">ENTERPRISE NETWORKING</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 2: HP -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 2h3.2l-3.4 20H2.1L5.5 2zm5.7 0h3.2l-1.3 7.8h3.3L15 2h3.2l-3.4 20h-3.2l1.4-8.2h-3.3L8.3 22H5.1l3.4-20h2.7z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">HP Enterprise</span>
+                <span class="brand-capsule-cat">SERVERS &amp; HARDWARE</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 3: Dell -->
+           <!-- <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.8 14.2h-2V7.8h2v8.4zm4.8 0h-2V7.8h2v8.4zm4.8 0h-2V7.8h2v8.4zM6.2 16.2H4.2V7.8h2v8.4z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Dell Technologies</span>
+                <span class="brand-capsule-cat">POWEREDGE &amp; SAN</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 4: Fortinet -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1 14h-2v-2h2v2zm0-4h-2V7h2v5zm4 4h-2v-5h2v5zm0-7h-2V7h2v2z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Fortinet</span>
+                <span class="brand-capsule-cat">NETWORK SECURITY</span>
+              </div>
+            </div>   -->
+
+            <!-- Brand 5: Hikvision -->
+           <!-- <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Hikvision</span>
+                <span class="brand-capsule-cat">ACCESS &amp; CCTV</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 6: Dahua -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Dahua Technology</span>
+                <span class="brand-capsule-cat">IP SURVEILLANCE</span>
+              </div>
+            </div>   -->
+
+            <!-- Brand 7: Ubiquiti -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.95 3 2.58 5.75 0 9.85l1.92 1.44C3.99 7.82 7.74 5.4 12 5.4s8.01 2.42 10.08 5.89l1.92-1.44C21.42 5.75 17.05 3 12 3zm0 4.8c-3.72 0-6.93 1.96-8.8 4.95l1.94 1.45C6.54 11.83 9.07 10.2 12 10.2s5.46 1.63 6.86 4l1.94-1.45C18.93 9.76 15.72 7.8 12 7.8zm0 4.8c-2.43 0-4.52 1.25-5.76 3.15L12 21l5.76-5.25C16.52 13.85 14.43 12.6 12 12.6z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Ubiquiti UniFi</span>
+                <span class="brand-capsule-cat">ENTERPRISE WI-FI</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 8: Lenovo -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v10H4zM2 18h20v2H2zM9 16h6v1H9z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Lenovo</span>
+                <span class="brand-capsule-cat">WORKSTATIONS &amp; PCS</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 9: Microsoft -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 2h9v9H2V2zm11 0h9v9h-9V2zM2 13h9v9H2v-9zm11 0h9v9h-9v-9z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Microsoft</span>
+                <span class="brand-capsule-cat">CLOUD &amp; OS SERVERS</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 10: Aruba -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zm0 8.5L4.5 7.75 12 4 19.5 7.75 12 10.5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Aruba Networks</span>
+                <span class="brand-capsule-cat">CAMPUS SWITCHING</span>
+              </div>
+            </div>   -->
+
+            <!-- Brand 11: APC Schneider -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">APC Schneider</span>
+                <span class="brand-capsule-cat">DATA CENTER UPS</span>
+              </div>
+            </div>  -->
+
+            <!-- Brand 12: Canon -->
+          <!--  <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Canon</span>
+                <span class="brand-capsule-cat">ENTERPRISE PRINT</span>
+              </div>
+            </div> -->
+
+            <!-- Brand 13: Epson -->
+         <!--   <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 3H6v4h12V3zM3 9c-1.1 0-2 .9-2 2v7h4v3h14v-3h4v-7c0-1.1-.9-2-2-2H3zm14 10H7v-4h10v4zm2-6.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Epson</span>
+                <span class="brand-capsule-cat">PRINTER SOLUTIONS</span>
+              </div>
+            </div> -->
+
+            <!-- Brand 14: Sophos -->
+        <!--    <div class="brand-capsule-card" aria-hidden="true">
+              <div class="brand-capsule-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg>
+              </div>
+              <div class="brand-capsule-info">
+                <span class="brand-capsule-name">Sophos</span>
+                <span class="brand-capsule-cat">ENDPOINT DEFENSE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  -->
+
+    <!-- ====================================================================
+         3. SERVICES GRID (3D Perspective Bento Grid)
+         ==================================================================== -->
+ <section id="services" class="services-section">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">OUR CAPABILITIES</span>
+
+      <h2 class="section-title">
+        Complete IT Solutions for Your Business
+      </h2>
+
+      <p class="section-subtitle">
+        From computers and networking to security, Wi-Fi, cabling, and technical support,
+        Cloud Computers provides practical technology solutions for businesses and individuals.
+      </p>
+    </div>
+
+
+    <div class="services-grid">
+
+      <!-- Card 1: Networking -->
+      <div class="tilt-card">
+        <div class="service-card-content">
+
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="9" y="2" width="6" height="6" rx="1"/>
+              <rect x="2" y="16" width="6" height="6" rx="1"/>
+              <rect x="16" y="16" width="6" height="6" rx="1"/>
+              <path d="M5 16v-4h14v4"/>
+              <path d="M12 8v4"/>
+            </svg>
+          </div>
+
+          <h3 class="service-title">Networking</h3>
+
+          <p class="service-desc">
+            Complete network solutions including routers, switches, VLANs,
+            wireless networks, point-to-point links, and network infrastructure
+            for homes, offices, and businesses.
+          </p>
+
+          <div class="service-chips">
+            <span class="service-chip">Routers</span>
+            <span class="service-chip">Switches</span>
+            <span class="service-chip">VLAN</span>
+            <span class="service-chip">P2P</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card 2: PC Sales & Services -->
+      <div class="tilt-card">
+        <div class="service-card-content">
+
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+
+          <h3 class="service-title">
+            PC Sales &amp; Services
+          </h3>
+
+          <p class="service-desc">
+            Desktop and laptop sales, upgrades, repairs, diagnostics,
+            operating system installation, hardware replacement, and
+            technical support for personal and business computers.
+          </p>
+
+          <div class="service-chips">
+            <span class="service-chip">Desktop PCs</span>
+            <span class="service-chip">Laptops</span>
+            <span class="service-chip">Upgrades</span>
+            <span class="service-chip">Repairs</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card 3: Printer Solutions -->
+      <div class="tilt-card">
+        <div class="service-card-content">
+
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"/>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+              <rect x="6" y="14" width="12" height="8"/>
+            </svg>
+          </div>
+
+          <h3 class="service-title">
+            Printer Solutions
+          </h3>
+
+          <p class="service-desc">
+            Printer sales, installation, maintenance, troubleshooting,
+            network printing, scanning, and printer support for offices,
+            businesses, and individual users.
+          </p>
+
+          <div class="service-chips">
+            <span class="service-chip">Printers</span>
+            <span class="service-chip">Scanners</span>
+            <span class="service-chip">Network Print</span>
+            <span class="service-chip">Service</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card 4: Structured Cabling -->
+      <div class="tilt-card">
+        <div class="service-card-content">
+
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 2v10"/>
+              <path d="M18.4 6.6a9 9 0 1 1-12.8 0"/>
+              <rect x="10" y="2" width="4" height="6" rx="1"/>
+            </svg>
+          </div>
+
+          <h3 class="service-title">
+            Structured Cabling
+          </h3>
+
+          <p class="service-desc">
+            Professional network cabling for offices, buildings, and
+            commercial environments, including Cat6, fiber optic cabling,
+            patch panels, racks, and organized cable management.
+          </p>
+
+          <div class="service-chips">
+            <span class="service-chip">Cat6</span>
+            <span class="service-chip">Fiber Optic</span>
+            <span class="service-chip">Patch Panels</span>
+            <span class="service-chip">Racks</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card 5: IT Solutions -->
+      <div class="tilt-card">
+        <div class="service-card-content">
+
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <rect x="9" y="9" width="6" height="6"/>
+              <line x1="9" y1="1" x2="9" y2="4"/>
+              <line x1="15" y1="1" x2="15" y2="4"/>
+              <line x1="9" y1="20" x2="9" y2="23"/>
+              <line x1="15" y1="20" x2="15" y2="23"/>
+              <line x1="20" y1="9" x2="23" y2="9"/>
+              <line x1="20" y1="14" x2="23" y2="14"/>
+              <line x1="1" y1="9" x2="4" y2="9"/>
+              <line x1="1" y1="14" x2="4" y2="14"/>
+            </svg>
+          </div>
+
+          <h3 class="service-title">
+            IT Solutions
+          </h3>
+
+          <p class="service-desc">
+            Practical IT solutions including system setup, software
+            installation, data backup, storage, business IT infrastructure,
+            device configuration, and technology support.
+          </p>
+
+          <div class="service-chips">
+            <span class="service-chip">IT Setup</span>
+            <span class="service-chip">Backup</span>
+            <span class="service-chip">Storage</span>
+            <span class="service-chip">IT Support</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card 6: Access & Security -->
+      <div class="tilt-card">
+        <div class="service-card-content">
+
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+
+          <h3 class="service-title">
+            Access &amp; Security
+          </h3>
+
+          <p class="service-desc">
+            Security and access control solutions including 
+            biometric attendance, door access control, intercoms, and
+            related security equipment.
+          </p>
+
+          <div class="service-chips">
+          <!--  <span class="service-chip">CCTV</span>  -->
+            <span class="service-chip">Biometrics</span>
+            <span class="service-chip">Door Access</span>
+            <span class="service-chip">Intercom</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card 7: Wi-Fi Solutions -->
+      <div class="tilt-card">
+        <div class="service-card-content">
+
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+              <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+              <line x1="12" y1="20" x2="12.01" y2="20" stroke-width="3"/>
+            </svg>
+          </div>
+
+          <h3 class="service-title">
+            Wi-Fi Solutions
+          </h3>
+
+          <p class="service-desc">
+            Reliable Wi-Fi solutions for homes, offices, warehouses,
+            camps, and large areas, including access point installation,
+            coverage planning, network optimization, and guest Wi-Fi.
+          </p>
+
+          <div class="service-chips">
+            <span class="service-chip">Wi-Fi</span>
+            <span class="service-chip">Access Points</span>
+            <span class="service-chip">Coverage</span>
+            <span class="service-chip">Optimization</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card 8: Technical Support -->
+      <div class="tilt-card">
+        <div class="service-card-content">
+
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+
+          <h3 class="service-title">
+            Technical Support
+          </h3>
+
+          <p class="service-desc">
+            Professional IT support for troubleshooting, system
+            maintenance, network issues, hardware problems, installations,
+            upgrades, and ongoing technical assistance.
+          </p>
+
+          <div class="service-chips">
+            <span class="service-chip">Troubleshooting</span>
+            <span class="service-chip">Maintenance</span>
+            <span class="service-chip">On-Site Support</span>
+            <span class="service-chip">Remote Support</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ====================================================================
+         4. WORKING PROCESS ("Our Step-by-Step Approach")
+         ==================================================================== -->
+           <section id="process" class="process-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="process-beacon-tag">
+            <span class="beacon-pulse"></span>
+            <span>WORKING PROCESS</span>
+          </div>
+          <h2 class="section-title">Our Step-by-Step Approach</h2>
+          <p class="section-subtitle">
+            With 14 years of experience since 2011, we are a team of 10+ professionals. Every project is managed by a dedicated project manager and supported by in-house experts.
+          </p>
+          
+          <div class="process-credentials">
+            <div class="cred-pill">
+              <span class="cred-icon">⚡</span>
+              <span><strong>Since 2011</strong> &bull; 14+ Years Proven IT Track Record</span>
+            </div>
+            <div class="cred-pill">
+              <span class="cred-icon">👨‍💻</span>
+              <span><strong>14+ Professionals</strong> &bull; In-House Certified Engineers</span>
+            </div>
+          <!--  <div class="cred-pill">
+              <span class="cred-icon">🛡️</span>
+              <span><strong>Full Compliance</strong> &bull; DEWA &bull; SEWA &bull; RTA &bull; SIRA</span>
+            </div>  -->
+          </div>
+        </div>
+
+        <!-- 3D Cinematic Interactive Stage -->
+        <div class="process-cinema-stage">
+          <!-- Left: Timeline Navigation Rail -->
+          <div class="process-timeline-col">
+            <div class="timeline-track-rail" aria-hidden="true">
+              <div class="timeline-track-glow" id="process-timeline-progress"></div>
+            </div>
+
+            <div class="process-steps-list">
+              <!-- Step 01 -->
+              <div class="process-step-item active" data-step="1" role="button" tabindex="0" aria-label="Step 1: Consultation">
+                <div class="step-num-badge">
+                  <span class="step-num">01</span>
+                </div>
+                <div class="step-body">
+                  <div class="step-head">
+                    <span class="step-phase-tag">PHASE 01</span>
+                    <h3 class="step-name">Consultation</h3>
+                  </div>
+                  <p class="step-summary">Understanding your needs and creating the right technical blueprint.</p>
+                  <div class="step-micro-tags">
+                    <span class="micro-tag">Site Assessment</span>
+                    <span class="micro-tag">Architecture CAD</span>
+                    <span class="micro-tag">Capacity Audit</span>
+                  </div>
+                </div>
+              </div>
+
+             
+              <!-- Step 02 -->
+              <div class="process-step-item" data-step="2" role="button" tabindex="0" aria-label="Step 2: Planning & Proposal">
+                <div class="step-num-badge">
+                  <span class="step-num">02</span>
+                </div>
+
+                <div class="step-body">
+                  <div class="step-head">
+                    <span class="step-phase-tag">PHASE 02</span>
+                    <h3 class="step-name">Planning &amp; Proposal</h3>
+                  </div>
+
+                  <p class="step-summary">
+                    We prepare the right technical solution, project scope, equipment requirements,
+                    and implementation plan based on your needs.
+                  </p>
+
+                  <div class="step-micro-tags">
+                    <span class="micro-tag">Technical Proposal</span>
+                    <span class="micro-tag">Solution Design</span>
+                    <span class="micro-tag">Equipment Planning</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 03 -->
+              <div class="process-step-item" data-step="3" role="button" tabindex="0" aria-label="Step 3: Site Execution">
+                <div class="step-num-badge">
+                  <span class="step-num">03</span>
+                </div>
+                <div class="step-body">
+                  <div class="step-head">
+                    <span class="step-phase-tag">PHASE 03</span>
+                    <h3 class="step-name">Site Execution</h3>
+                  </div>
+                  <p class="step-summary">Professional implementation by certified engineers and technicians.</p>
+                  <div class="step-micro-tags">
+                    <span class="micro-tag">Structured Cabling</span>
+                    <span class="micro-tag">Rack Assembly</span>
+                    <span class="micro-tag">Fiber Splicing</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 04 -->
+              <div class="process-step-item" data-step="4" role="button" tabindex="0" aria-label="Step 4: Testing">
+                <div class="step-num-badge">
+                  <span class="step-num">04</span>
+                </div>
+                <div class="step-body">
+                  <div class="step-head">
+                    <span class="step-phase-tag">PHASE 04</span>
+                    <h3 class="step-name">Testing</h3>
+                  </div>
+                  <p class="step-summary">Complete QA/QC verification and final flawless system handover.</p>
+                  <div class="step-micro-tags">
+                    <span class="micro-tag">Fluke DSX Cert</span>
+                    <span class="micro-tag">10G Line Rate</span>
+                    <span class="micro-tag">Signed Handover</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 05 -->
+              <div class="process-step-item" data-step="5" role="button" tabindex="0" aria-label="Step 5: Support">
+                <div class="step-num-badge">
+                  <span class="step-num">05</span>
+                </div>
+                <div class="step-body">
+                  <div class="step-head">
+                    <span class="step-phase-tag">PHASE 05</span>
+                    <h3 class="step-name">Support</h3>
+                  </div>
+                  <p class="step-summary">Dedicated customer assistance and rapid response support teams.</p>
+                  <div class="step-micro-tags">
+                    <span class="micro-tag">24/7 SLA NOC</span>
+                    <span class="micro-tag">&lt;15m Response</span>
+                    <span class="micro-tag">On-Site Dispatch</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 06 -->
+              <div class="process-step-item" data-step="6" role="button" tabindex="0" aria-label="Step 6: Maintenance">
+                <div class="step-num-badge">
+                  <span class="step-num">06</span>
+                </div>
+                <div class="step-body">
+                  <div class="step-head">
+                    <span class="step-phase-tag">PHASE 06</span>
+                    <h3 class="step-name">Maintenance</h3>
+                  </div>
+                  <p class="step-summary">Long-term maintenance, annual contracts, and system upgrades.</p>
+                  <div class="step-micro-tags">
+                    <span class="micro-tag">Annual AMC 365</span>
+                    <span class="micro-tag">Security Patches</span>
+                    <span class="micro-tag">Quarterly Audits</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Holographic Interactive Telemetry HUD -->
+          <div class="process-holo-col">
+            <div class="holo-display-frame">
+              <div class="holo-top-bar">
+                <div class="holo-status-leds">
+                  <span class="led red"></span>
+                  <span class="led yellow"></span>
+                  <span class="led green"></span>
+                  <span class="holo-telemetry-text">SYSTEM PIPELINE MONITOR &bull; PROJECT TRACKER</span>
+                </div>
+           <!--     <div class="holo-phase-indicator" id="holo-phase-name">PHASE 01: CONSULTATION &amp; BLUEPRINT</div>  -->
+              </div>
+
+              <div class="holo-panels-viewport">
+                <!-- Panel 1: Consultation / Blueprint -->
+                <div class="holo-panel active" data-panel="1">
+                  <div class="panel-graphic-card">
+                    <div class="panel-blueprint-grid">
+                      <svg viewBox="0 0 460 260" class="blueprint-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <pattern id="cadGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="0.8"/>
+                          </pattern>
+                        </defs>
+                        <rect width="460" height="260" fill="#050a16"/>
+                        <rect width="460" height="260" fill="url(#cadGrid)"/>
+                        
+                        <rect x="35" y="25" width="390" height="205" rx="8" stroke="#00b4ff" stroke-width="1.8" stroke-dasharray="6 4" fill="rgba(0, 180, 255, 0.03)"/>
+                        
+                        <!-- Zone 1: Data Center -->
+                        <rect x="55" y="45" width="160" height="105" rx="4" stroke="#00f0ff" stroke-width="1.5" fill="rgba(0, 240, 255, 0.06)"/>
+                        <text x="65" y="65" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">ZONE 01: DATA CENTER</text>
+                        <rect x="68" y="75" width="36" height="60" rx="2" stroke="#00ffaa" stroke-width="1.2" fill="#081832"/>
+                        <rect x="112" y="75" width="36" height="60" rx="2" stroke="#00ffaa" stroke-width="1.2" fill="#081832"/>
+                        <rect x="156" y="75" width="46" height="60" rx="2" stroke="#00b4ff" stroke-width="1.2" fill="#081832"/>
+                        <text x="73" y="110" fill="#00ffaa" font-family="'JetBrains Mono', monospace" font-size="8">RACK 1</text>
+                        <text x="117" y="110" fill="#00ffaa" font-family="'JetBrains Mono', monospace" font-size="8">RACK 2</text>
+                        <text x="160" y="110" fill="#00b4ff" font-family="'JetBrains Mono', monospace" font-size="8">PATCH</text>
+
+                        <!-- Zone 2: Workstations -->
+                        <rect x="235" y="45" width="170" height="165" rx="4" stroke="#0088ff" stroke-width="1.5" fill="rgba(0, 136, 255, 0.04)"/>
+                        <text x="245" y="65" fill="#00a8ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">ZONE 02: WORKSTATIONS</text>
+                        <rect x="248" y="80" width="40" height="26" rx="2" stroke="#4d9aff" stroke-width="1" fill="#0c1a36"/>
+                        <rect x="300" y="80" width="40" height="26" rx="2" stroke="#4d9aff" stroke-width="1" fill="#0c1a36"/>
+                        <rect x="352" y="80" width="40" height="26" rx="2" stroke="#4d9aff" stroke-width="1" fill="#0c1a36"/>
+                        <rect x="248" y="120" width="40" height="26" rx="2" stroke="#4d9aff" stroke-width="1" fill="#0c1a36"/>
+                        <rect x="300" y="120" width="40" height="26" rx="2" stroke="#4d9aff" stroke-width="1" fill="#0c1a36"/>
+                        <rect x="352" y="120" width="40" height="26" rx="2" stroke="#4d9aff" stroke-width="1" fill="#0c1a36"/>
+
+                        <!-- Conduit Traces -->
+                        <path d="M 180 135 L 180 170 L 248 170" stroke="#00f0ff" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+                        <path d="M 180 105 L 235 105" stroke="#00ffaa" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+                        <circle cx="180" cy="105" r="3" fill="#00ffaa"/>
+                        <circle cx="235" cy="105" r="3" fill="#00ffaa"/>
+
+                        <!-- Dimension line -->
+                        <line x1="55" y1="240" x2="405" y2="240" stroke="#00b4ff" stroke-width="1.2"/>
+                        <polygon points="55,237 45,240 55,243" fill="#00b4ff"/>
+                        <polygon points="405,237 415,240 405,243" fill="#00b4ff"/>
+                        <text x="230" y="236" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">SPAN: 48.5 METERS &bull; CAT6A + OM4 FIBER TRUNK</text>
+                      </svg>
+                    </div>
+                    <div class="holo-panel-caption">
+                      <div class="caption-title"><span class="bullet-dot"></span> Comprehensive Needs Analysis &amp; Technical CAD Blueprint</div>
+                      <p>Physical site survey, structured conduit path calculations, thermal dissipation profile, and bill-of-materials verified by dedicated project managers.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel 2: Planning & Proposal -->
+<div class="holo-panel" data-panel="2">
+  <div class="panel-graphic-card">
+
+    <div class="approvals-grid">
+
+      <!-- Technical Proposal -->
+      <div class="gov-badge-card">
+        <div class="gov-badge-header">
+          <div class="gov-crest-icon">
+            <svg viewBox="0 0 32 32" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M7 4h14a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+              <path d="M9 9h10M9 14h10M9 19h6"/>
+            </svg>
+          </div>
+
+          <span class="gov-badge-code">01</span>
+        </div>
+
+        <h4 class="gov-name">Technical Proposal</h4>
+
+        <p class="gov-sub">
+          A clear solution proposal based on the customer's requirements,
+          site conditions, and project scope.
+        </p>
+
+        <div class="gov-status-pill approved">
+          <span class="status-dot"></span> PREPARED
+        </div>
+      </div>
+
+
+      <!-- Solution Design -->
+      <div class="gov-badge-card">
+        <div class="gov-badge-header">
+          <div class="gov-crest-icon">
+            <svg viewBox="0 0 32 32" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <rect x="5" y="5" width="22" height="22" rx="2"/>
+              <path d="M10 21l5-10 7 10"/>
+              <circle cx="11" cy="11" r="2"/>
+            </svg>
+          </div>
+
+          <span class="gov-badge-code">02</span>
+        </div>
+
+        <h4 class="gov-name">Solution Design</h4>
+
+        <p class="gov-sub">
+          Network layouts, equipment selection, infrastructure planning,
+          and technical recommendations.
+        </p>
+
+        <div class="gov-status-pill approved">
+          <span class="status-dot"></span> DESIGNED
+        </div>
+      </div>
+
+
+      <!-- Equipment Planning -->
+      <div class="gov-badge-card">
+        <div class="gov-badge-header">
+          <div class="gov-crest-icon">
+            <svg viewBox="0 0 32 32" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <rect x="4" y="6" width="24" height="20" rx="2"/>
+              <path d="M9 11h14M9 16h14M9 21h8"/>
+            </svg>
+          </div>
+
+          <span class="gov-badge-code">03</span>
+        </div>
+
+        <h4 class="gov-name">Equipment Planning</h4>
+
+        <p class="gov-sub">
+          Hardware, networking equipment, cabling, access points,
+          security systems, and required materials.
+        </p>
+
+        <div class="gov-status-pill approved">
+          <span class="status-dot"></span> PLANNED
+        </div>
+      </div>
+
+
+      <!-- Client Approval -->
+      <div class="gov-badge-card highlight-sira">
+        <div class="gov-badge-header">
+          <div class="gov-crest-icon">
+            <svg viewBox="0 0 32 32" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M16 3l10 4v7c0 7-4.5 12-10 15C10.5 26 6 21 6 14V7l10-4z"/>
+              <path d="M11 16l3 3 7-8"/>
+            </svg>
+          </div>
+
+          <span class="gov-badge-code">04</span>
+        </div>
+
+        <h4 class="gov-name">Client Confirmation</h4>
+
+        <p class="gov-sub">
+          Once the proposal is reviewed and approved by the client,
+          we proceed with the agreed implementation scope.
+        </p>
+
+        <div class="gov-status-pill approved">
+          <span class="status-dot"></span> READY TO PROCEED
+        </div>
+      </div>
+
+    </div>
+
+    <div class="holo-panel-caption">
+      <div class="caption-title">
+        <span class="bullet-dot"></span>
+        Technical Planning &amp; Solution Proposal
+      </div>
+
+      <p>
+        We assess your requirements, prepare the appropriate technical solution,
+        recommend the required equipment and infrastructure, and provide a clear
+        proposal for your review. Any required authority approvals remain with
+        the client or relevant project authority.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+                <!-- Panel 3: Site Execution -->
+                <div class="holo-panel" data-panel="3">
+                  <div class="panel-graphic-card">
+                    <div class="execution-visual">
+                      <svg viewBox="0 0 460 220" class="exec-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="laserLine" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#00ffaa"/>
+                            <stop offset="50%" stop-color="#00f0ff"/>
+                            <stop offset="100%" stop-color="#0066ff"/>
+                          </linearGradient>
+                        </defs>
+                        <rect x="25" y="15" width="410" height="190" rx="8" fill="#060e20" stroke="#0077ff" stroke-width="1.8"/>
+                        <!-- Patch Panel -->
+                        <rect x="45" y="30" width="370" height="32" rx="4" fill="#0c1a38" stroke="#00f0ff" stroke-width="1.2"/>
+                        <text x="55" y="50" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="9">PATCH PANEL 01 [CAT6A SHIELDED - 48 PORTS]</text>
+                        <g fill="#00ffaa">
+                          <circle cx="285" cy="46" r="3.5"/><circle cx="300" cy="46" r="3.5"/><circle cx="315" cy="46" r="3.5"/><circle cx="330" cy="46" r="3.5"/>
+                          <circle cx="345" cy="46" r="3.5"/><circle cx="360" cy="46" r="3.5"/><circle cx="375" cy="46" r="3.5"/><circle cx="390" cy="46" r="3.5"/>
+                        </g>
+
+                        <!-- Core Switch -->
+                        <rect x="45" y="75" width="370" height="36" rx="4" fill="#0a1630" stroke="#00ffaa" stroke-width="1.5"/>
+                        <text x="55" y="98" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">CORE 10G AGGREGATION SWITCH</text>
+                        <rect x="280" y="84" width="125" height="18" rx="2" fill="#002b66" stroke="#00ffff" stroke-width="1"/>
+                        <text x="290" y="96" fill="#00ffff" font-family="'JetBrains Mono', monospace" font-size="8">SFP+ 10G ACTIVE &bull; 0 ERR</text>
+
+                        <!-- Fiber Optic Tracers -->
+                        <path d="M 285 50 C 280 62, 285 70, 290 82" stroke="url(#laserLine)" stroke-width="2" fill="none"/>
+                        <path d="M 315 50 C 310 62, 315 70, 320 82" stroke="url(#laserLine)" stroke-width="2" fill="none"/>
+                        <path d="M 345 50 C 340 62, 345 70, 350 82" stroke="url(#laserLine)" stroke-width="2" fill="none"/>
+                        <path d="M 375 50 C 370 62, 375 70, 380 82" stroke="url(#laserLine)" stroke-width="2" fill="none"/>
+
+                        <!-- SAN Storage Array -->
+                        <rect x="45" y="125" width="370" height="38" rx="4" fill="#081226" stroke="#0077ff" stroke-width="1.2"/>
+                        <text x="55" y="148" fill="#00a8ff" font-family="'JetBrains Mono', monospace" font-size="9">HIGH-AVAILABILITY ALL-FLASH STORAGE</text>
+
+                        <!-- Field Engineer Telemetry Banner -->
+                        <rect x="45" y="172" width="370" height="24" rx="3" fill="rgba(0, 240, 255, 0.08)" stroke="#00f0ff" stroke-width="1"/>
+                        <text x="58" y="188" fill="#00ffaa" font-family="'JetBrains Mono', monospace" font-size="9">● CERTIFIED ENGINEERS ON SITE &bull; VELCRO DRESSING &bull; ZERO DEFECTS</text>
+                      </svg>
+                    </div>
+                    <div class="holo-panel-caption">
+                      <div class="caption-title"><span class="bullet-dot"></span> Certified Field Engineering &amp; Server Assembly</div>
+                      <p>Site execution by certified engineers and technicians with structured velcro bundling, laser-aligned server racks, zero cable stress, and redundant power distribution.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel 4: Testing & QA Handover -->
+                <div class="holo-panel" data-panel="4">
+                  <div class="panel-graphic-card">
+                    <div class="testing-dashboard">
+                      <div class="test-stats-grid">
+                        <div class="test-metric-box">
+                          <span class="metric-label">FLUKE DSX CERTIFICATION</span>
+                          <span class="metric-val text-green">100% PASS</span>
+                          <span class="metric-sub">ISO/IEC 11801 Class EA</span>
+                        </div>
+                        <div class="test-metric-box">
+                          <span class="metric-label">THROUGHPUT TEST</span>
+                          <span class="metric-val text-cyan">9.98 Gbps</span>
+                          <span class="metric-sub">Wire-speed line rate</span>
+                        </div>
+                        <div class="test-metric-box">
+                          <span class="metric-label">PACKET LOSS / JITTER</span>
+                          <span class="metric-val text-green">0.00% / 0.1ms</span>
+                          <span class="metric-sub">Zero degradation</span>
+                        </div>
+                        <div class="test-metric-box">
+                          <span class="metric-label">HANDOVER STATUS</span>
+                          <span class="metric-val text-cyan">APPROVED</span>
+                          <span class="metric-sub">QA/QC Sign-off Ready</span>
+                        </div>
+                      </div>
+
+                      <div class="test-waveform-box">
+                        <svg viewBox="0 0 420 60" class="waveform-svg" fill="none">
+                          <path d="M 0 30 Q 25 10 50 30 T 100 30 T 150 30 T 200 30 T 250 30 T 300 30 T 350 30 T 400 30 L 420 30" stroke="#00ffaa" stroke-width="2.2" fill="none"/>
+                          <path d="M 0 30 Q 25 18 50 30 T 100 30 T 150 30 T 200 30 T 250 30 T 300 30 T 350 30 T 400 30 L 420 30" stroke="#00f0ff" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+                        </svg>
+                        <div class="waveform-legend">
+                          <span>Return Loss Margin: +8.4 dB</span>
+                          <span>NEXT Margin: +9.2 dB</span>
+                          <span>Attenuation: Optimal</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="holo-panel-caption">
+                      <div class="caption-title"><span class="bullet-dot"></span> Fluke Quality Assurance &amp; Flawless Handover</div>
+                      <p>Every port and fiber termination is calibrated, validated via Fluke test instruments, documented with certified PDF test reports, and formally signed off.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel 5: Dedicated Support -->
+                <div class="holo-panel" data-panel="5">
+                  <div class="panel-graphic-card">
+                    <div class="support-noc-screen">
+                      <div class="noc-header">
+                        <span class="noc-badge">24/7/365 NOC COMMAND</span>
+                        <span class="noc-ping">RESPONSE SLA: &lt; 15 MINUTES</span>
+                      </div>
+                      <div class="noc-body">
+                        <div class="noc-radar-visual">
+                          <svg viewBox="0 0 160 160" class="radar-svg">
+                            <circle cx="80" cy="80" r="70" stroke="rgba(0, 240, 255, 0.25)" stroke-width="1.5" fill="none"/>
+                            <circle cx="80" cy="80" r="45" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1.5" fill="none"/>
+                            <circle cx="80" cy="80" r="20" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5" fill="none"/>
+                            <line x1="10" y1="80" x2="150" y2="80" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1"/>
+                            <line x1="80" y1="10" x2="80" y2="150" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1"/>
+                            <line x1="80" y1="80" x2="145" y2="40" stroke="#00ffaa" stroke-width="2.5" class="radar-sweep-hand"/>
+                            <circle cx="80" cy="80" r="4" fill="#00ffaa"/>
+                            <circle cx="105" cy="55" r="3" fill="#00ffff" class="pulse-blip"/>
+                            <circle cx="60" cy="110" r="3" fill="#00ffaa" class="pulse-blip"/>
+                          </svg>
+                        </div>
+                        <div class="noc-metrics-list">
+                          <div class="noc-row">
+                            <span class="noc-label">Live Active Monitored Nodes</span>
+                            <span class="noc-val text-cyan">4,820 Nodes</span>
+                          </div>
+                          <div class="noc-row">
+                            <span class="noc-label">Average First Response Time</span>
+                            <span class="noc-val text-green">8.4 Minutes</span>
+                          </div>
+                          <div class="noc-row">
+                            <span class="noc-label">On-Site Dispatch Fleet</span>
+                            <span class="noc-val text-green">Ready (UAE Wide)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="holo-panel-caption">
+                      <div class="caption-title"><span class="bullet-dot"></span> Rapid Response Customer Assistance</div>
+                      <p>Around-the-clock helpdesk, telemetry monitoring, remote diagnostics, and dedicated rapid-response dispatch vans across Dubai, Sharjah, and Northern Emirates.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel 6: Maintenance & AMC -->
+                <div class="holo-panel" data-panel="6">
+                  <div class="panel-graphic-card">
+                    <div class="maintenance-lifecycle">
+                      <div class="lifecycle-ring-wrap">
+                        <svg viewBox="0 0 200 200" class="ring-svg">
+                          <defs>
+                            <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                              <stop offset="0%" stop-color="#00ffaa"/>
+                              <stop offset="50%" stop-color="#00f0ff"/>
+                              <stop offset="100%" stop-color="#0044ff"/>
+                            </linearGradient>
+                          </defs>
+                          <circle cx="100" cy="100" r="80" stroke="#0c1833" stroke-width="14" fill="none"/>
+                          <circle cx="100" cy="100" r="80" stroke="url(#ringGrad)" stroke-width="14" stroke-dasharray="420 80" stroke-linecap="round" fill="none"/>
+                          <circle cx="100" cy="100" r="55" fill="#060e22" stroke="#00f0ff" stroke-width="1.5"/>
+                          <text x="100" y="96" text-anchor="middle" fill="#00ffaa" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700">AMC 365</text>
+                          <text x="100" y="114" text-anchor="middle" fill="#8ca0c2" font-family="'Inter', sans-serif" font-size="9">ANNUAL CONTRACT</text>
+                        </svg>
+                      </div>
+                      <div class="lifecycle-features">
+                        <div class="feature-bullet">
+                          <span class="bullet-icon">🔄</span>
+                          <div>
+                            <strong>Preventive Quarterly Audits</strong>
+                            <p>Deep hardware inspections, thermal imaging, and dust extraction.</p>
+                          </div>
+                        </div>
+                        <div class="feature-bullet">
+                          <span class="bullet-icon">🔒</span>
+                          <div>
+                            <strong>Firmware &amp; Security Patching</strong>
+                            <p>Zero-day vulnerability fixes and scheduled off-peak updates.</p>
+                          </div>
+                        </div>
+                        <div class="feature-bullet">
+                          <span class="bullet-icon">📈</span>
+                          <div>
+                            <strong>Hardware Lifecycle Planning</strong>
+                            <p>Predictive component wear detection and capacity scaling.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="holo-panel-caption">
+                      <div class="caption-title"><span class="bullet-dot"></span> Long-Term Maintenance &amp; Scalable Annual Contracts</div>
+                      <p>Protect your IT investment with comprehensive Annual Maintenance Contracts (AMC), guaranteed replacement hardware, and seamless upgrades.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. NETWORKING SOLUTIONS & INTERACTIVE TOPOLOGY DIAGRAM
+         ==================================================================== -->
+    <section id="network" class="network-section">
+      <div class="container">
+        <div class="network-grid">
+          <!-- Left Info Column -->
+          <div class="network-info">
+            <span class="section-tag">NETWORKING SOLUTIONS</span>
+            <h2 class="section-title">
+              Build a Faster, Safer and Smarter <span class="title-blue">Network</span>
+            </h2>
+            <p class="network-desc">
+              We architect and implement high-density network infrastructure for small to large businesses, ensuring 99.99% uptime, seamless roaming, and zero latency bottlenecks.
+            </p>
+            <button class="btn btn-primary" data-open-modal="quote" data-service="Networking Solutions">
+              Get Network Audit
+              <span class="btn-arrow" aria-hidden="true">›</span>
+            </button>
+          </div>
+
+          <!-- Right Interactive Network Topology Diagram -->
+          <div class="network-diagram-container">
+            <svg class="network-svg-lines" viewBox="0 0 600 420" preserveAspectRatio="none">
+              <defs>
+                <filter id="lineNeon" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="glow"/>
+                  <feMerge>
+                    <feMergeNode in="glow"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <path id="link-server" class="network-link-line" d="M 300 200 C 320 140, 360 90, 400 70" filter="url(#lineNeon)"/>
+              <path id="link-router" class="network-link-line" d="M 270 205 C 220 180, 170 150, 130 125" filter="url(#lineNeon)"/>
+              <path id="link-ap" class="network-link-line" d="M 340 210 C 400 195, 450 175, 500 150" filter="url(#lineNeon)"/>
+              <path id="link-pc" class="network-link-line" d="M 270 235 C 220 270, 170 300, 130 335" filter="url(#lineNeon)"/>
+              <path id="link-laptop" class="network-link-line" d="M 305 240 C 310 290, 310 320, 310 345" filter="url(#lineNeon)"/>
+              <path id="link-phone" class="network-link-line" d="M 335 235 C 380 270, 430 300, 480 335" filter="url(#lineNeon)"/>
+            </svg>
+
+            <!-- Interactive Network Nodes Layer -->
+            <div class="network-nodes-layer">
+              <!-- Central Switch Hub -->
+              <div class="net-node net-node-hub" style="top: 50%; left: 51%;" data-link="hub">
+                <div class="node-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="5" width="20" height="14" rx="3"/>
+                    <line x1="6" y1="12" x2="6.01" y2="12" stroke-width="3"/>
+                    <line x1="10" y1="12" x2="10.01" y2="12" stroke-width="3"/>
+                    <line x1="14" y1="12" x2="14.01" y2="12" stroke-width="3"/>
+                    <line x1="18" y1="12" x2="18.01" y2="12" stroke-width="3"/>
+                  </svg>
+                </div>
+                <span class="node-label">Switch</span>
+              </div>
+
+              <!-- 2. Server -->
+              <div class="net-node" style="top: 17%; left: 68%;" data-link="link-server">
+                <div class="node-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2"/>
+                    <rect x="2" y="14" width="20" height="8" rx="2"/>
+                    <line x1="6" y1="6" x2="6.01" y2="6" stroke-width="2"/>
+                    <line x1="6" y1="18" x2="6.01" y2="18" stroke-width="2"/>
+                  </svg>
+                </div>
+                <span class="node-label">Server</span>
+              </div>
+
+              <!-- 3. Router -->
+              <div class="net-node" style="top: 30%; left: 22%;" data-link="link-router">
+                <div class="node-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="11" width="20" height="8" rx="2"/>
+                    <path d="M6 11V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"/>
+                  </svg>
+                </div>
+                <span class="node-label">Router</span>
+              </div>
+
+              <!-- 4. Access Point -->
+              <div class="net-node" style="top: 36%; left: 83%;" data-link="link-ap">
+                <div class="node-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                    <circle cx="12" cy="18" r="2"/>
+                  </svg>
+                </div>
+                <span class="node-label">Access Point</span>
+              </div>
+
+              <!-- 5. PC -->
+              <div class="net-node" style="top: 80%; left: 22%;" data-link="link-pc">
+                <div class="node-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                </div>
+                <span class="node-label">PC</span>
+              </div>
+
+              <!-- 6. Laptop -->
+              <div class="net-node" style="top: 82%; left: 51%;" data-link="link-laptop">
+                <div class="node-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/>
+                  </svg>
+                </div>
+                <span class="node-label">Laptop</span>
+              </div>
+
+              <!-- 7. IP Phone -->
+              <div class="net-node" style="top: 80%; left: 80%;" data-link="link-phone">
+                <div class="node-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="5" y="3" width="14" height="18" rx="2"/>
+                    <circle cx="12" cy="14" r="1"/>
+                  </svg>
+                </div>
+                <span class="node-label">IP Phone</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. PRODUCTS SHOWCASE CAROUSEL
+         ==================================================================== -->
+    <section id="products" class="products-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">HARDWARE PRODUCTS</span>
+          <h2 class="section-title">Latest Devices for Your Business</h2>
+          <p class="section-subtitle">Top brands. Best performance. Competitive prices.</p>
+        </div>
+
+        <div class="carousel-container">
+          <button class="carousel-btn carousel-btn-prev" aria-label="Previous product">‹</button>
+          
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <!-- Product 1: Laptops -->
+              <div class="product-card tilt-card">
+                <div class="product-img-wrap">
+                  <svg viewBox="0 0 200 130" fill="none">
+                    <defs>
+                      <linearGradient id="laptopGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#002b66"/>
+                        <stop offset="100%" stop-color="#00f0ff"/>
+                      </linearGradient>
+                    </defs>
+                    <rect x="35" y="15" width="130" height="85" rx="5" fill="#0d1830" stroke="#00f0ff" stroke-width="2"/>
+                    <rect x="42" y="22" width="116" height="71" rx="2" fill="url(#laptopGrad)"/>
+                    <path d="M45 80 Q 90 40 120 70 T 155 45" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" fill="none"/>
+                    <path d="M20 100 L 180 100 L 170 110 L 30 110 Z" fill="#14244a" stroke="#00f0ff" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div class="product-info-bar">
+                  <div class="product-details">
+                    <h3 class="product-title">Laptops</h3>
+                    <span class="product-tagline">Work &bull; Study &bull; Business</span>
+                  </div>
+                  <a href="#contact" class="product-arrow-btn" aria-label="Inquire Laptops">→</a>
+                </div>
+              </div>
+
+              <!-- Product 2: Desktop PCs -->
+              <div class="product-card tilt-card">
+                <div class="product-img-wrap">
+                  <svg viewBox="0 0 200 130" fill="none">
+                    <rect x="35" y="20" width="55" height="95" rx="4" fill="#0b1429" stroke="#00f0ff" stroke-width="2"/>
+                    <circle cx="62" cy="45" r="14" stroke="#00f0ff" stroke-width="2"/>
+                    <circle cx="62" cy="80" r="14" stroke="#0066ff" stroke-width="2"/>
+                    <rect x="100" y="25" width="75" height="60" rx="3" fill="#081022" stroke="#00f0ff" stroke-width="1.8"/>
+                    <line x1="137" y1="85" x2="137" y2="105" stroke="#00f0ff" stroke-width="2"/>
+                    <line x1="120" y1="105" x2="155" y2="105" stroke="#00f0ff" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="product-info-bar">
+                  <div class="product-details">
+                    <h3 class="product-title">Desktop PCs</h3>
+                    <span class="product-tagline">Custom &bull; High Performance</span>
+                  </div>
+                  <a href="#contact" class="product-arrow-btn" aria-label="Inquire PCs">→</a>
+                </div>
+              </div>
+
+              <!-- Product 3: Network Switches -->
+              <div class="product-card tilt-card">
+                <div class="product-img-wrap">
+                  <svg viewBox="0 0 200 130" fill="none">
+                    <rect x="25" y="45" width="150" height="40" rx="4" fill="#0c1834" stroke="#00f0ff" stroke-width="2"/>
+                    <g fill="#00ffaa">
+                      <circle cx="45" cy="65" r="3"/><circle cx="58" cy="65" r="3"/>
+                      <circle cx="71" cy="65" r="3"/><circle cx="84" cy="65" r="3"/>
+                      <circle cx="97" cy="65" r="3"/><circle cx="110" cy="65" r="3"/>
+                      <circle cx="123" cy="65" r="3"/><circle cx="136" cy="65" r="3"/>
+                    </g>
+                    <rect x="150" y="58" width="16" height="14" rx="2" fill="#002b66" stroke="#00ffff" stroke-width="1"/>
+                  </svg>
+                </div>
+                <div class="product-info-bar">
+                  <div class="product-details">
+                    <h3 class="product-title">Network Switches</h3>
+                    <span class="product-tagline">10G / PoE / Managed</span>
+                  </div>
+                  <a href="#contact" class="product-arrow-btn" aria-label="Inquire Switches">→</a>
+                </div>
+              </div>
+
+              <!-- Product 4: Access Points -->
+              <div class="product-card tilt-card">
+                <div class="product-img-wrap">
+                  <svg viewBox="0 0 200 130" fill="none">
+                    <circle cx="100" cy="65" r="45" fill="#0d1836" stroke="#00f0ff" stroke-width="2"/>
+                    <circle cx="100" cy="65" r="30" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+                    <circle cx="100" cy="65" r="16" fill="#071126" stroke="#00ffaa" stroke-width="2"/>
+                    <circle cx="100" cy="65" r="5" fill="#00f0ff"/>
+                  </svg>
+                </div>
+                <div class="product-info-bar">
+                  <div class="product-details">
+                    <h3 class="product-title">Access Points</h3>
+                    <span class="product-tagline">Wi-Fi 6/7 Coverage</span>
+                  </div>
+                  <a href="#contact" class="product-arrow-btn" aria-label="Inquire APs">→</a>
+                </div>
+              </div>
+
+              <!-- Product 5: Printers -->
+              <div class="product-card tilt-card">
+                <div class="product-img-wrap">
+                  <svg viewBox="0 0 200 130" fill="none">
+                    <rect x="35" y="40" width="130" height="65" rx="6" fill="#0e1834" stroke="#00f0ff" stroke-width="2"/>
+                    <rect x="50" y="25" width="100" height="15" rx="3" fill="#14244d" stroke="#00f0ff" stroke-width="1.5"/>
+                    <rect x="110" y="48" width="45" height="20" rx="3" fill="#002b66" stroke="#00ffff" stroke-width="1"/>
+                    <rect x="55" y="75" width="90" height="16" rx="2" fill="#060c1c" stroke="#0077ff" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div class="product-info-bar">
+                  <div class="product-details">
+                    <h3 class="product-title">Printers</h3>
+                    <span class="product-tagline">Print &bull; Scan &bull; Copy</span>
+                  </div>
+                  <a href="#contact" class="product-arrow-btn" aria-label="Inquire Printers">→</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn carousel-btn-next" aria-label="Next product">›</button>
+
+          <div class="carousel-dots">
+            <button class="carousel-dot active" aria-label="Slide 1"></button>
+            <button class="carousel-dot" aria-label="Slide 2"></button>
+            <button class="carousel-dot" aria-label="Slide 3"></button>
+            <button class="carousel-dot" aria-label="Slide 4"></button>
+            <button class="carousel-dot" aria-label="Slide 5"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. STATS & WHY CHOOSE US
+         ==================================================================== -->
+    <section id="about" class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <!-- Server Rack Visual -->
+          <div class="stats-visual-rack">
+            <svg class="stats-rack-img" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="500" height="380" fill="#050a17"/>
+              <rect x="40" y="20" width="16" height="340" fill="#0d1933" stroke="#0055ff" stroke-width="1"/>
+              <rect x="444" y="20" width="16" height="340" fill="#0d1933" stroke="#0055ff" stroke-width="1"/>
+              <g fill="#0a1226" stroke="#0077ff" stroke-width="1.5">
+                <rect x="70" y="35" width="360" height="42" rx="4"/>
+                <rect x="70" y="90" width="360" height="42" rx="4"/>
+                <rect x="70" y="145" width="360" height="42" rx="4"/>
+                <rect x="70" y="200" width="360" height="42" rx="4"/>
+                <rect x="70" y="255" width="360" height="42" rx="4"/>
+                <rect x="70" y="310" width="360" height="35" rx="4"/>
+              </g>
+              <g stroke="#00f0ff" stroke-width="2" fill="none" opacity="0.8">
+                <path d="M 120 40 C 90 120, 160 200, 130 340"/>
+                <path d="M 160 40 C 130 140, 200 240, 170 340"/>
+                <path d="M 280 40 C 250 150, 320 230, 290 340"/>
+                <path d="M 360 40 C 330 140, 420 220, 380 340"/>
+              </g>
+              <g fill="#00ffaa">
+                <circle cx="85" cy="55" r="2.5"/><circle cx="95" cy="55" r="2.5"/>
+                <circle cx="85" cy="110" r="2.5"/><circle cx="95" cy="110" r="2.5"/>
+                <circle cx="85" cy="165" r="2.5"/><circle cx="95" cy="165" r="2.5"/>
+                <circle cx="85" cy="220" r="2.5"/><circle cx="95" cy="220" r="2.5"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Stats Numbers -->
+          <div class="stats-content">
+            <span class="section-tag">WHY CHOOSE US</span>
+            <h2 class="section-title">Your Success Is Our Priority</h2>
+            <p class="section-subtitle">
+              Delivering high-performance IT solutions, UAE regulatory compliance, and rapid on-site response across all Emirates.
+            </p>
+
+            <div class="stats-cards-row">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="stat-text">
+                  <div class="stat-number-wrap">
+                    <span class="stat-number" data-target="14" data-suffix="+">0</span>
+                  </div>
+                  <span class="stat-label">Years Experience (Est. 2011)</span>
+                </div>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <div class="stat-text">
+                  <div class="stat-number-wrap">
+                    <span class="stat-number" data-target="10" data-suffix="+">0</span>
+                  </div>
+                  <span class="stat-label">In-House Certified Experts</span>
+                </div>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+                <div class="stat-text">
+                  <div class="stat-number-wrap">
+                    <span class="stat-number" data-target="1000" data-suffix="+">0</span>
+                  </div>
+                  <span class="stat-label">Projects Completed</span>
+                </div>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                    <path d="M3 3v5h5"/>
+                    <path d="M12 7v5l4 2"/>
+                  </svg>
+                </div>
+                <div class="stat-text">
+                  <div class="stat-number-wrap">
+                    <span class="stat-number" data-target="24" data-suffix="/7">0</span>
+                  </div>
+                  <span class="stat-label">Rapid Response Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. BRANDS SECTION
+         ==================================================================== -->
+    <section class="brands-section">
+      <div class="container">
+        <h3 class="brands-title">AUTHORIZED HARDWARE &amp; TECHNOLOGY</h3>
+        <div class="brands-row">
+          <div class="brand-item" title="Dell Technologies">
+            <svg viewBox="0 0 120 32" fill="currentColor">
+              <text x="50%" y="68%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="22" letter-spacing="3">DELL</text>
+            </svg>
+          </div>
+          <div class="brand-item" title="Lenovo">
+            <svg viewBox="0 0 120 32" fill="currentColor">
+              <text x="50%" y="68%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="20" letter-spacing="1">Lenovo</text>
+            </svg>
+          </div>
+          <div class="brand-item" title="HP Enterprise">
+            <svg viewBox="0 0 80 32" fill="currentColor">
+              <circle cx="40" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <text x="40" y="22" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="16" font-style="italic">hp</text>
+            </svg>
+          </div>
+          <div class="brand-item" title="TP-Link">
+            <svg viewBox="0 0 120 32" fill="currentColor">
+              <text x="50%" y="68%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-size="19" letter-spacing="1">tp-link</text>
+            </svg>
+          </div>
+          <div class="brand-item" title="Cisco">
+            <svg viewBox="0 0 120 32" fill="currentColor">
+              <text x="50%" y="68%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="20" letter-spacing="2">CISCO</text>
+            </svg>
+          </div>
+          <div class="brand-item" title="MikroTik">
+            <svg viewBox="0 0 120 32" fill="currentColor">
+              <text x="50%" y="68%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="19">MikroTik</text>
+            </svg>
+          </div>
+          <div class="brand-item" title="Ubiquiti">
+            <svg viewBox="0 0 120 32" fill="currentColor">
+              <text x="50%" y="68%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="19" letter-spacing="2">UBIQUITI</text>
+            </svg>
+          </div>
+          <div class="brand-item" title="Canon">
+            <svg viewBox="0 0 120 32" fill="currentColor">
+              <text x="50%" y="68%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="20" letter-spacing="2">Canon</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9. CTA BANNER
+         ==================================================================== -->
+    <section id="contact" class="cta-section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-left">
+            <div class="cta-cloud-icon">
+              <img src="css/asset/logo.png" alt="Cloud Computers" style="width: 34px; height: 34px; object-fit: contain;">
+            </div>
+            <div class="cta-text">
+              <h2 class="cta-title">Ready to Upgrade Your IT Infrastructure?</h2>
+              <p class="cta-desc">Tell us about your IT requirements and our technical team will assist you..</p>
+            </div>
+          </div>
+
+          <div class="cta-actions" style="display: flex; gap: 12px; flex-wrap: wrap;">
+            
+            <button class="btn btn-outline" data-open-modal="quote" data-service="General Consultation">
+              Request Proposal
+              <span class="btn-arrow" aria-hidden="true">›</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         10. FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#home" class="brand-logo" aria-label="Cloud Computers Footer Logo">
+            <img src="css/asset/logo.png" alt="Cloud Computers" class="brand-logo-img">
+            <span class="brand-text">CLOUD <span class="brand-accent">COMPUTERS</span></span>
+          </a>
+
+          <ul class="footer-nav">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#process" class="footer-link">Process</a></li>
+            <li><a href="#products" class="footer-link">Products</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+
+          <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Cloud Computers. All rights reserved. Operating since 2011.</p>
+          <span class="footer-motto">Architect &bull; Protect &bull; Accelerate</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ====================================================================
+       INTERACTIVE QUOTE / CONSULTATION MODAL
+       ==================================================================== -->
+  <div id="quote-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="modal-title" class="modal-title">Request IT Consultation</h2>
+          <p class="modal-desc">Tell us about your IT requirements and our technical team will assist you..</p>
+        </div>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <!-- Quick WhatsApp Consultation Banner -->
+      <a href="https://wa.me/971553350141?text=Hello%20Cloud%20Computers,%20I%20would%20like%20to%20quickly%20chat%20about%20an%20IT%20project." target="_blank" rel="noopener noreferrer" class="modal-wa-banner">
+        <div class="modal-wa-banner-left">
+          <svg class="modal-wa-banner-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <div>
+            <div class="modal-wa-title">Need an instant response?</div>
+            <div class="modal-wa-subtitle">Chat directly with an IT engineer on WhatsApp</div>
+          </div>
+        </div>
+        <span class="btn btn-whatsapp btn-sm">Chat Now</span>
+      </a>
+
+      <form id="quote-form" class="modal-form">
+        <div class="form-group">
+          <label for="user-name" class="form-label">Full Name *</label>
+          <input type="text" id="user-name" class="form-input" placeholder="e.g. Tariq Al Mansoori" required>
+        </div>
+
+        <div class="form-group">
+          <label for="user-email" class="form-label">Work Email *</label>
+          <input type="email" id="user-email" class="form-input" placeholder="name@company.ae" required>
+        </div>
+
+        <div class="form-group">
+          <label for="user-phone" class="form-label">Phone / WhatsApp *</label>
+          <input type="tel" id="user-phone" class="form-input" placeholder="+971 50 123 4567" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service-select" class="form-label">Service Required</label>
+          <select id="service-select" class="form-select">
+            <option value="General Consultation">General IT Consultation</option>
+            <option value="Networking">Enterprise Networking &amp; Switching</option>
+            <option value="Cabling">Structured Cabling &amp; Fiber Splicing</option>
+            <option value="PC Sales & Services">PC &amp; Workstation Deployments</option>
+            <option value="Printer Solutions">Commercial Printer Solutions</option>
+            <option value="IT Solutions">Cloud, SAN &amp; Disaster Recovery</option>
+            <option value="Access & Security">Access Control</option>
+            <option value="Wi-Fi Solutions">Wi-Fi Solutions</option>
+            <option value="Technical Support">Technical Support &amp; Maintenance</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="user-notes" class="form-label">Project Scope / Specific Requirements</label>
+          <textarea id="user-notes" class="form-textarea" rows="2" placeholder="Describe site location, user count, or timeline..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 6px; justify-content: center;">
+          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Send Inquiry via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- Floating 3D Glowing WhatsApp Quick-Action Widget -->
+  <aside id="floating-whatsapp" class="floating-whatsapp-widget" aria-label="WhatsApp Quick Support">
+    <a href="https://wa.me/971553350141?text=Hello%20Cloud%20Computers,%20I%20would%20like%20to%20inquire%20about%20your%20IT%20services." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="wa-float-btn" 
+       id="wa-float-link"
+       title="Chat with an IT specialist on WhatsApp">
+      <div class="wa-float-pulse"></div>
+      <div class="wa-float-icon">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </div>
+     
+    </a>
+  </aside>
+
+  <!-- Vendor Libraries: Three.js r128, GSAP 3.12+ & ScrollTrigger (Local Offline) -->
+  <script src="js/vendor/three.min.js"></script>
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+
+  <!-- Modular Scripts -->
+  <script src="js/three-hero.js"></script>
+  <script src="js/tilt3d.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/network-diagram.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
