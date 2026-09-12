@@ -46,9 +46,7 @@
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0, 195, 255, ${this.baseAlpha})`;
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = 'rgba(0, 210, 255, 0.5)';
+      ctx.fillStyle = `rgba(2, 132, 199, ${this.baseAlpha * 0.45})`;
       ctx.fill();
     }
   }
@@ -61,7 +59,6 @@
   }
 
   function drawConnections() {
-    ctx.shadowBlur = 0;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
@@ -69,12 +66,12 @@
         const dist = Math.hypot(dx, dy);
 
         if (dist < connectionDistance) {
-          const alpha = (1 - dist / connectionDistance) * 0.18;
+          const alpha = (1 - dist / connectionDistance) * 0.12;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 168, 255, ${alpha})`;
-          ctx.lineWidth = 0.8;
+          ctx.strokeStyle = `rgba(2, 132, 199, ${alpha})`;
+          ctx.lineWidth = 0.6;
           ctx.stroke();
         }
       }
